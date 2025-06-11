@@ -1,0 +1,1 @@
+Put images in the _static folder, and reference them accordingly in markdown. Break it into folders too - one for each chapter, by media type, etc
