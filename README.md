@@ -2,7 +2,7 @@
 This repo contains most of the necessary parts of a Jupyter-book (configured for GLOCAL usage) - I've included a few sample parts and chapters as a starting point. Sample Part 3 Chapter 3 is probably my best example of 'good' markdown usage - so use it as a reference sheet if you'd like.
 
 ## What to Change:
-- README.md lines 1, 3, 4, 5
+- SAMPLE_README.md lines 1, 3, 4, 5 (also rename to just README.md)
 - CONTRIBUTING.md lines 28, 29, 45, 56
 - deploy.yml (if publishing) lines 27, 32, 33, 38
 - glocal-book-template folder name
