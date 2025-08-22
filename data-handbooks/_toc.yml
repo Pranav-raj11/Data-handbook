@@ -6,11 +6,13 @@ root: index
 parts:
   - caption: "Sample Part 1"
     chapters:
-      - file: sample-chapter-1/intro
-
+      - file: sample-part-1/intro
+  - caption: "Sample Part 2"
+    chapters:
+      - file: sample-part-2/sample-chaper-2
   - caption: "Python"
     chapters:
-      - file: python/python-basics
+      - file: sample-part-3/python-basics
         sections:
           - file: sample-part-3/chapter-folder-1/file-management
 
