@@ -24,18 +24,18 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Regenerate Sphinx conf
-        working-directory: glocal-book-template
+        working-directory: data-handbooks
         run: jupyter-book config sphinx .
 
       - name: Build Jupyter Book
         run: |
-          jupyter-book clean glocal-book-template
-          jupyter-book build glocal-book-template
+          jupyter-book clean data-handbooks
+          jupyter-book build data-handbooks
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: glocal-book-template/_build/html
+          path: data-handbooks/_build/html
 
   deploy:
     needs: build
