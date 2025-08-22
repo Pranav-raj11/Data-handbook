@@ -6,7 +6,7 @@ root: Data Analysis With SQL
 parts:
   - caption: "SQL"
     chapters:
-      - file: Section 1/SQL intro
+      - file: Section 1/SQL Intro
   - caption: "index"
     chapters:
       - file: reference/index
