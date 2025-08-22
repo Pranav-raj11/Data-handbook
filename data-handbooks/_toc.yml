@@ -2,21 +2,21 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: index
+root: Data Analysis With SQL
 parts:
   - caption: "Sample Part 1"
     chapters:
-      - file: sample-part-1/intro
+      - file: reference/sample-part-1/intro
   - caption: "Sample Part 2"
     chapters:
-      - file: sample-part-2/sample-chaper-2
+      - file: reference/sample-part-2/sample-chaper-2
   - caption: "Python"
     chapters:
-      - file: sample-part-3/python-basics
+      - file: reference/sample-part-3/python-basics
         sections:
-          - file: sample-part-3/chapter-folder-1/file-management
+          - file: reference/sample-part-3/chapter-folder-1/file-management
   - caption: "SQL"
     chapters:
-      - file: Data Analysis With SQL
+      - file: index
 
   
