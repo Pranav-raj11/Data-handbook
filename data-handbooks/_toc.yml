@@ -4,6 +4,12 @@
 format: jb-book
 root: Data Analysis With SQL
 parts:
+  - caption: "SQL"
+    chapters:
+      - file: Section 1/SQL intro
+  - caption: "index"
+    chapters:
+      - file: reference/index
   - caption: "Sample Part 1"
     chapters:
       - file: reference/sample-part-1/intro
@@ -15,8 +21,4 @@ parts:
       - file: reference/sample-part-3/python-basics
         sections:
           - file: reference/sample-part-3/chapter-folder-1/file-management
-  - caption: "SQL"
-    chapters:
-      - file: index
-
   
