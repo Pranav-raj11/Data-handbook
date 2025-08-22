@@ -15,5 +15,8 @@ parts:
       - file: sample-part-3/python-basics
         sections:
           - file: sample-part-3/chapter-folder-1/file-management
+  - caption: "SQL"
+    chapters:
+      - file: Data Analysis With SQL
 
   
