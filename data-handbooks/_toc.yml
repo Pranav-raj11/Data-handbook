@@ -4,9 +4,26 @@
 format: jb-book
 root: Data-Analysis-With-SQL
 parts:
-  - caption: "SQL"
+  - caption: "SQL Intro"
     chapters:
       - file: Section-1/SQL-Intro
+  - caption: "SQL Getting Started"
+    chapters:
+      - file: Section-2/SQL-Getting-Started
+  - caption: "SQL Basic Data Analysis"
+    chapters:
+      - file: Section-3/SQL-Basic-Data-Analysis
+  - caption: "SQL Importing"
+    chapters:
+      - file: Section-4/SQL-Importing
+  - caption: "SQL Final Documentation"
+    chapters:
+      - file: Section-5/SQL-Final-Documentation
+  - caption: "SQL Save"
+    chapters:
+      - file: Section-6/SQL-Save
+
+
   - caption: "index"
     chapters:
       - file: reference/index
