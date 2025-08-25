@@ -9,7 +9,7 @@ parts:
       - file: Section-1/SQL-Intro
       - file: Section-2/SQL-Getting-Started
       - file: Section-3/SQL-Basic-Data-Analysis
-        chapters: 
+        sections: 
           - file: Section-3/navigating
           - file: Section-3/saving
           - file: Section-3/database
