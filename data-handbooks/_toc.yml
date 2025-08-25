@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: Data-Analysis-With-SQL
+root: index
 parts:
   - caption: "SQL"
     chapters:
