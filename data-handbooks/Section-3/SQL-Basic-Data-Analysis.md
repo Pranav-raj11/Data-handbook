@@ -19,7 +19,8 @@ Step 2: You should see ‘Local instance’ under MySQL Connections. If you **do
 
 Every time you open MySQL Workbench, use this connection to connect to your local server. 
 
-![][image1]  
+![][image1] 
+ 
 *\*This is MySQL Workbench on macOS. Windows will look slightly different but overall, they’re almost identical in terms of functionality\**
 
 1. Create a new tab for writing SQL code (queries)  

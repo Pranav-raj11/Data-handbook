@@ -4,26 +4,17 @@
 format: jb-book
 root: Data-Analysis-With-SQL
 parts:
-  - caption: "SQL Intro"
+  - caption: "SQL"
     chapters:
       - file: Section-1/SQL-Intro
+        chapters: 
+          - file: Section-3/navigating
+        chapters: 
+          - file: Section-3/saving
+        chapters: 
+          - file: Section-3/database
       - file: Section-2/SQL-Getting-Started
       - file: Section-3/SQL-Basic-Data-Analysis
       - file: Section-4/SQL-Importing
       - file: Section-5/SQL-Final-Documentation
       - file: Section-6/SQL-Save
-  - caption: "index"
-    chapters:
-      - file: reference/index
-  - caption: "Sample Part 1"
-    chapters:
-      - file: reference/sample-part-1/intro
-  - caption: "Sample Part 2"
-    chapters:
-      - file: reference/sample-part-2/sample-chaper-2
-  - caption: "Python"
-    chapters:
-      - file: reference/sample-part-3/python-basics
-        sections:
-          - file: reference/sample-part-3/chapter-folder-1/file-management
-  
