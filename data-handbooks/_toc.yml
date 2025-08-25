@@ -12,7 +12,6 @@ parts:
       - file: Section-4/SQL-Importing
       - file: Section-5/SQL-Final-Documentation
       - file: Section-6/SQL-Save
-  - caption: "SQL Getting Started"
   - caption: "index"
     chapters:
       - file: reference/index
