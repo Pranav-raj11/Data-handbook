@@ -22,8 +22,6 @@ parts:
   - caption: "SQL Save"
     chapters:
       - file: Section-6/SQL-Save
-
-
   - caption: "index"
     chapters:
       - file: reference/index
