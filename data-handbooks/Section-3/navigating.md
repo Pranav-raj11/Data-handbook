@@ -9,8 +9,8 @@ MySQL Workbench is MySQL’s official graphical interface for working with datab
 * Explore data visually  
 * export/import data easily
 
-Step 1: Open MySQL Workbench  
-Step 2: You should see ‘Local instance’ under MySQL Connections. If you **don’t**, follow these steps: 
+**Step 1:** Open MySQL Workbench  
+**Step 2:** You should see ‘Local instance’ under MySQL Connections. If you **don’t**, follow these steps: 
 
 * Click the plus beside *MySQL Connections*  
 * Give the connection a name like ‘Local Instance’  
