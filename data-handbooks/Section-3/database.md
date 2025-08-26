@@ -40,3 +40,7 @@ Method 2: In your query editor, write the query (replace \*\_\* with your db nam
 ### Exercise \#1
 
 Make a new tab. Create a database and use it. Save this script into a folder for the work you’ll do in this handbook. 
+
+```{admonition} Exercise 1
+Make a new tab. Create a database and use it. Save this script into a folder for the work you’ll do in this handbook.
+```
