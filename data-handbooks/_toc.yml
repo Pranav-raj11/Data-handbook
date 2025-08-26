@@ -24,3 +24,4 @@ parts:
       - file: Section-5/SQL-Final-Documentation
       - file: Section-6/SQL-Save
       - file: reference/sample-part-3/python-basics
+      - file: Section-7/Common-SQL-Syntax
