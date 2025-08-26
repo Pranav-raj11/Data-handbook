@@ -2,7 +2,7 @@
 
 ### Creating Tables
 
-* Step 1:  In your query editor, write the query (replace \*\_\* with your table and column names where required)
+**Step 1:**  In your query editor, write the query (replace \*\_\* with your table and column names where required)
 
 ```sql
 CREATE TABLE your_table_name (
@@ -27,7 +27,7 @@ CREATE TABLE personal_info (
 ```
 
 
-* Step 2: Run the code and hit the refresh button in the schemas tab. You should see your table in your database now.
+**Step 2:** Run the code and hit the refresh button in the schemas tab. You should see your table in your database now.
 
 ```{admonition} Exercise \#2
 
@@ -37,8 +37,8 @@ Make a new tab. Create a table for a list of employees. Include at least 5 colum
 
 ### Inserting Rows Into Tables
 
-* Step 1:  
-  * In your query editor, write the query (replace \*\_\* with your table and column names where required)
+
+In your query editor, write the query (replace \*\_\* with your table and column names where required)
 
 ```sql
 INSERT INTO *your_table_name*

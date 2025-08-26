@@ -1,4 +1,4 @@
-**Common Syntax**
+## **Common Syntax**
 
 ```{Note}
 Key Notes:
