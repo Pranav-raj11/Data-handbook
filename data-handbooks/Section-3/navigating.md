@@ -19,7 +19,7 @@ MySQL Workbench is MySQL’s official graphical interface for working with datab
 
 Every time you open MySQL Workbench, use this connection to connect to your local server. 
 
-![][image1] 
+![Alt Text](mysql-workbench-nav.jpg)
  
 *\*This is MySQL Workbench on macOS. Windows will look slightly different but overall, they’re almost identical in terms of functionality\**
 

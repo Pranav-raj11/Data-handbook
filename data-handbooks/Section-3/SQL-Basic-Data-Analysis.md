@@ -9,8 +9,8 @@ MySQL Workbench is MySQL’s official graphical interface for working with datab
 * Explore data visually  
 * export/import data easily
 
-Step 1: Open MySQL Workbench  
-Step 2: You should see ‘Local instance’ under MySQL Connections. If you **don’t**, follow these steps: 
+**Step 1:** Open MySQL Workbench  
+**Step 2:** You should see ‘Local instance’ under MySQL Connections. If you **don’t**, follow these steps: 
 
 * Click the plus beside *MySQL Connections*  
 * Give the connection a name like ‘Local Instance’  
@@ -161,7 +161,7 @@ For the example earlier, we can show the table with only the columns name and ag
 
 In the tab you used for exercise 2, try showing only three of the columns that are in your dataset.
 
-Filtering (Where Statement)
+#### Filtering (Where Statement)
 
 To extract only the records that fulfill a specified condition, we use the WHERE statement with your SELECT statement 
 
@@ -179,7 +179,7 @@ There are lots of formats for writing conditions. You can use Basic comparison o
 
 In the same tab as exercise 2, create a filter using at least 1 AND/OR. 
 
-Sorting Data (Order By Statement)
+#### Sorting Data (Order By Statement)
 
 To sort the rows returned by your query, use the ORDER BY clause. You can sort results in ascending order (default) or descending order by adding DESC.
 
@@ -200,7 +200,7 @@ Or we can order the table by age (descending):
 
 In the same tab as exercise 2, order your dataset by a column in descending order. 
 
-Limiting Results (Limit Statement)
+#### Limiting Results (Limit Statement)
 
 To return only a certain number of rows, use the LIMIT clause. This is helpful when working with large datasets.
 

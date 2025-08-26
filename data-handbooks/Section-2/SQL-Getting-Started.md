@@ -14,7 +14,7 @@
   - On the installation complete page, check ‘Start MySQL Workbench after setup.’ Starting MySQL Shell is not required right now unless you want to explore it.   
 - Finish installation
 
-#### IOS:  
+#### MacOS:  
 **Step 1:** Go to [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/) 
 - Select version (8.0.43) and OS and download the DMG Archive  
 - Click ‘no thanks, just start my download’  

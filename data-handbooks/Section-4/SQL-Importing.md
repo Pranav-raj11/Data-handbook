@@ -13,23 +13,23 @@ To download:
 * Click the **Download** button  
 * Leave all settings as default as shown below:
 
-![][image6]
+![](kaggle-download.png)
 
 * Then click **Download dataset as ZIP**
 
 To import the sample dataset, follow these steps:
 
-Step 1: In the Schemas Panel, right-click on your schema (\**your\_database\_name*\*)
+**Step 1:** In the Schemas Panel, right-click on your schema (\**your\_database\_name*\*)
 
-Step 2: Select Table Data Import Wizard.
+**Step 2:** Select Table Data Import Wizard.
 
-Step 3: Browse for your dataset file (Cleaned\_Dataset.csv for ours) and click Next.
+**Step 3:** Browse for your dataset file (Cleaned\_Dataset.csv for ours) and click Next.
 
-Step 4: Choose the target destination where the data will be imported. If you already created a table for it, choose ‘Use Existing Table.’ Otherwise, select ‘Create New Table’ and choose the database and create a table name. 
+**Step 4:** Choose the target destination where the data will be imported. If you already created a table for it, choose ‘Use Existing Table.’ Otherwise, select ‘Create New Table’ and choose the database and create a table name. 
 
-Step 5: Workbench will automatically suggest column names and data types based on the CSV. Adjust if needed (e.g., change numbers to INT or DECIMAL, dates to DATE).
+**Step 5:** Workbench will automatically suggest column names and data types based on the CSV. Adjust if needed (e.g., change numbers to INT or DECIMAL, dates to DATE).
 
-Step 6: Click Next → Finish.
+**Step 6:** Click Next → Finish.
 
 ### Exercise \#9
 
