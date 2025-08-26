@@ -11,8 +11,16 @@ parts:
       - file: Section-3/SQL-Basic-Data-Analysis
         sections: 
           - file: Section-3/navigating
+            title: "Navigating MySQL Workbench"
           - file: Section-3/saving
+            title: "Saving Queries"
           - file: Section-3/database
+            title: "Databases"
+          - file: Section-3/tables
+            title: "Tables"
+          - file: Section-3/basic-queries
+            title: "Basic Queries"
       - file: Section-4/SQL-Importing
       - file: Section-5/SQL-Final-Documentation
       - file: Section-6/SQL-Save
+      - file: reference/sample-part-3/python-basics

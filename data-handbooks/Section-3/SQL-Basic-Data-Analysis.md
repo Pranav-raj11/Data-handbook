@@ -19,7 +19,7 @@ MySQL Workbench is MySQL’s official graphical interface for working with datab
 
 Every time you open MySQL Workbench, use this connection to connect to your local server. 
 
-![][image1] 
+![Alt Text](mysql-workbench-nav.jpg)
  
 *\*This is MySQL Workbench on macOS. Windows will look slightly different but overall, they’re almost identical in terms of functionality\**
 
@@ -48,14 +48,14 @@ You can think of a database as a folder. It acts as a container. Tables would be
   * You will see in your output (7) that the action was successful (green check)  
 * Step 3: Select the Schemas tab (4) and hit the refresh button beside where it says schemas. You should now see your new database. 
 
-![][image2]
+![](create-db.png) 
 
 **Use the database:** 
 
 There are two ways: 
 
 Method 1: Right click on the database and click on ‘Set as Default Schema’  
-![][image3]  
+![](set-default-schema.png)  
 Method 2: In your query editor, write the query (replace \*\_\* with your db name)
 
 | USE \*your\_database\_name\*; |
@@ -74,9 +74,9 @@ Method 2: In your query editor, write the query (replace \*\_\* with your db nam
 
 ### Saving Queries
 
-To save your query, click on the save icon in the tool bar (near lightning bolt) \-\> ![][image4]  
+To save your query, click on the save icon in the tool bar (near lightning bolt) \-\> ![](save-icon.png) 
 Alternatively, you could click on file → save script as  
-To create a new query tab, click on the new file icon (1) on the top left ![][image5]
+To create a new query tab, click on the new file icon (1) on the top left ![](new-file.png)
 
 Important Notes About Running Queries
 
