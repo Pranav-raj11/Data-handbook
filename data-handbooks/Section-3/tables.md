@@ -67,6 +67,6 @@ SELECT * FROM personal_info;
 
 
 
-``` admonition Exercise 3
+```{admonition} Exercise 3
 In the tab from exercise 2. insert at least 5 rows to your table of employees. Use the SELECT statement to view your table.
 ```

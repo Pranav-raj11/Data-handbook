@@ -1,16 +1,17 @@
 **Common Syntax**
 
+```{Note}
 Key Notes:
-
 - SQL not case sensitive but generally use uppercase for keywords  
 - Use ‘--’ to comment lines  
 - Ctrl-Shift-Enter to run all  
 - Terminate statement with semi-colon  
 - Order: SELECT, FROM, WHERE, ORDER BY, LIMIT
+```
 
 | Function | Description | Syntax | Example |
 | :---- | :---- | :---- | :---- |
-| USE | Select database for query | USE *database\_name;* |  |
+| USE | Select database for query | ```sql USE database_name;``` |  |
 | Select | Returns the table with the columns specified | SELECT column 1, column2 …  FROM table\_name;    (use \* for all columns) |  |
 | AS | Set a column name to something else You can use arithmetic with columns (column\_name \+ 10\) | SELECT column 1 AS ‘new column name’, column2 …  FROM table\_name;   |  |
 | WHERE | Used to extract only the records that fulfill the specified condition  | SELECT column 1, column2, … FROM table\_name WHERE condition;  | Select all customers from Mexico: SELECT \* FROM Customers WHERE Country \= ‘Mexico’;  |
@@ -44,6 +45,47 @@ Key Notes:
 | UPDATE / SET | Used to modify the existing records in a table. | UPDATE table\_name SET column1 \= value1, column2 \= value2, ... WHERE condition; | UPDATE customers SET points \= points \+ 50 WHERE birth\_date \< '1990-01-01' |
 | DELETE FROM | Used to delete existing records in a table. | DELETE FROM table\_name WHERE condition; | DELETE FROM invoices WHERE client\_id \= (SELECT \* FROM clients	WHERE name \= 'Myworks') |
 
+### New table
+
+| Function | Description | Syntax | Example |
+| :---- | :---- | :---- | :---- |
+| USE | Select database for query | ```sql USE database_name; ``` |  |
+| Select | Returns the table with the columns specified | ```sql SELECT column1, column2 … FROM table_name; (use * for all columns) ``` |  |
+| AS | Set a column name to something else. You can use arithmetic with columns (column_name + 10) | ```sql SELECT column1 AS 'new column name', column2 … FROM table_name; ``` |  |
+| WHERE | Used to extract only the records that fulfill the specified condition | ```sql SELECT column1, column2, … FROM table_name WHERE condition; ``` | ```sql SELECT * FROM Customers WHERE Country = 'Mexico'; ``` |
+| SELECT DISTINCT | Select columns but with no duplicates | ```sql SELECT DISTINCT column1, column2, … FROM table_name; (use * for all columns) ``` |  |
+| Operators | Operators used in WHERE clause: =, <>, BETWEEN (range), LIKE (pattern), IN (multiple values) | ```sql =, <>, !=, BETWEEN, LIKE, IN ``` | ```sql SELECT * FROM Products WHERE Price BETWEEN 50 AND 60; SELECT * FROM Customers WHERE City LIKE 's%'; SELECT * FROM Customers WHERE City IN ('Paris','London'); ``` |
+| AND/OR | Allows for multiple conditions. AND has higher precedence | ```sql SELECT column1, column2, … FROM table_name WHERE condition1 AND condition2 OR condition3…; ``` | ```sql SELECT * FROM Customers WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%'); ``` |
+| NOT | Used to negate conditions | ```sql SELECT column1, column2, ... FROM table_name WHERE NOT condition; ``` | ```sql SELECT * FROM Customers WHERE CustomerName NOT LIKE 'A%'; ``` |
+| IN | Allows specifying multiple values in a WHERE clause | ```sql SELECT * FROM table_name WHERE column_name IN (value1, value2 …); ``` | ```sql SELECT * FROM Customers WHERE state IN ('VA', 'GA', 'FL'); ``` |
+| BETWEEN | Selects values within a range | ```sql SELECT * FROM table_name WHERE column_name BETWEEN value1 AND value2; ``` | ```sql SELECT * FROM Customers WHERE birth_date BETWEEN '1990-1-1' AND '2000-1-1'; ``` |
+| LIKE | Search for a pattern in a column | ```sql SELECT * FROM table_name WHERE column_name LIKE '*pattern*'; ``` | ```sql SELECT * FROM customers WHERE address LIKE '%trail%' OR address LIKE '%avenue%'; ``` |
+| REGEXP | Search for complex patterns in a column | ```sql SELECT * FROM table_name WHERE column_name REGEXP '*pattern*'; ``` | ```sql SELECT * FROM customers WHERE last_name REGEXP 'field|mac|rose'; SELECT * FROM customers WHERE first_name REGEXP 'Elka|Ambur'; SELECT * FROM customers WHERE last_name REGEXP '(ey|on)$'; SELECT * FROM customers WHERE last_name REGEXP '^MY|SE'; SELECT * FROM customers WHERE last_name REGEXP 'B[RU]'; ``` |
+| IS NULL | Checks for null values | ```sql SELECT * FROM table_name WHERE column_name IS NULL; ``` | ```sql SELECT * FROM orders WHERE shipped_date IS NULL; ``` |
+| ORDER BY | Used to sort the result-set | ```sql SELECT * FROM table_name ORDER BY column_name (DESC optional); ``` | ```sql SELECT *, quantity * unit_price AS total_price FROM order_items WHERE order_id = 2 ORDER BY total_price DESC; ``` |
+| LIMIT | Specify number of records to return | ```sql SELECT * FROM table_name LIMIT offset, number; ``` | ```sql SELECT * FROM customers ORDER BY points DESC LIMIT 3; ``` |
+| ‘INNER’ JOIN | Select records with matching values in both tables | ```sql SELECT column_name(s) FROM table1 INNER JOIN table2 ON table1.column_name = table2.column_name; ``` |  |
+| Self Join | Join a table with itself |  | ```sql SELECT e.employee_id, e.first_name, m.first_name AS manager FROM employees e INNER JOIN employees m ON e.reports_to = m.employee_id; ``` |
+| Joining Multiple Tables | Join multiple datasets | ```sql SELECT column_name(s) FROM table1 INNER JOIN table2 ON table1.column_name = table2.column_name; (INNER) JOIN table3 ON table1.column_name = table3.column_name; ``` | ```sql SELECT o.order_id, o.order_date, c.first_name, c.last_name, os.name AS status FROM orders o JOIN customers c ON o.customer_id = c.customer_id JOIN order_statuses os ON o.status = os.order_status_id; ``` |
+| Compound Join Conditions | Multiple conditions to join 2 tables | ```sql SELECT column_name(s) FROM table1 JOIN table2 ON table1.column_name = table2.column_name AND table1.column_name2 = table2.column_name2; ``` | ```sql SELECT * FROM order_items oi JOIN order_item_notes oin ON oi.order_id = oin.order_id AND oi.product_id = oin_product_id; ``` |
+| Implicit Join | Join tables by listing in FROM clause, using WHERE for condition | ```sql SELECT column_name(s) FROM table1, table2 WHERE table1.column_name = table2.column_name; ``` | ```sql SELECT * FROM orders o, customers c WHERE o.customer_id = c.customer_id; ``` |
+| OUTER JOIN | Combines data from two or more tables |  |  |
+| LEFT JOIN | Returns all records from left table, matching from right | ```sql SELECT column_name(s) FROM table1 LEFT JOIN table2 ON table1.column_name = table2.column_name; ``` | ```sql SELECT p.product_id, p.name, oi.quantity FROM products p LEFT JOIN order_items oi ON p.product_id = oi.product_id; ``` |
+| RIGHT JOIN | Returns all records from right table, matching from left | ```sql SELECT column_name(s) FROM table1 RIGHT JOIN table2 ON table1.column_name = table2.column_name; ``` |  |
+| OUTER Joining Multiple Tables | Outer join on multiple datasets | ```sql SELECT column_name(s) FROM table1 LEFT JOIN table2 ON table1.column_name = table2.column_name; LEFT JOIN table3 ON table1.column_name = table3.column_name; ``` | ```sql SELECT c.customer_id, c.first_name, o.order_id, sh.name AS shipper FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id LEFT JOIN shippers sh ON o.shipper_id = sh.shipper_id ORDER BY c.customer_id; ``` |
+| USING | Simplifies joins by specifying common columns | ```sql SELECT column_name(s) FROM table1 JOIN table2 USING (column_name); ``` | ```sql SELECT o.order_id, c.first_name, sh.name AS shipper FROM orders o JOIN customers c USING (customer_id) JOIN shippers sh USING (shipper_id); ``` |
+| NATURAL JOIN | Join on columns with same name automatically | ```sql SELECT column_name(s) FROM table1 NATURAL JOIN table2; ``` | ```sql SELECT o.order_id, c.first_name FROM orders o NATURAL JOIN customers c; ``` |
+| CROSS JOIN | Returns all records from both tables | ```sql SELECT column_name(s) FROM table1 CROSS JOIN table2; ``` | ```sql SELECT c.first_name AS customer, p.name AS product FROM customers c CROSS JOIN products p; ``` |
+| IMPLICIT CROSS JOIN | Join tables in FROM clause separated by commas | ```sql SELECT column_name(s) FROM table1, table2; ``` | ```sql SELECT c.first_name AS customer, p.name AS product FROM customers c, products p; ``` |
+| UNION | Combine result-set of two or more queries | ```sql SELECT column_name(s) FROM table1 UNION SELECT column_name(s) FROM table2; ``` | ```sql SELECT order_id, order_date, 'Active' AS status FROM orders WHERE order_date >= '2019-01-01' UNION SELECT order_id, order_date, 'Archived' AS status FROM orders WHERE order_date < '2019-01-01'; ``` |
+| INSERT INTO | Insert new records | ```sql INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...); INSERT INTO table_name VALUES (value1, value2, ...); ``` | ```sql INSERT INTO customers VALUES (DEFAULT, 'John', 'Smith', '1990-01-01', NULL, 'address', 'city', 'CA', DEFAULT); INSERT INTO shippers (name) VALUES ('Shipper1'), ('Shipper2'), ('Shipper3'); ``` |
+| CREATE TABLE | Create a new table | ```sql CREATE TABLE table_name (column1 datatype, column2 datatype, column3 datatype, ...); ``` | ```sql CREATE TABLE invoices_archived AS SELECT i.invoice_id, i.number, c.name AS client, i.invoice_total, i.payment_total, invoice_date, i.payment_date, i.due_date FROM invoices i JOIN clients c USING (client_id) WHERE i.payment_date IS NOT NULL; ``` |
+| UPDATE / SET | Modify existing records | ```sql UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition; ``` | ```sql UPDATE customers SET points = points + 50 WHERE birth_date < '1990-01-01'; ``` |
+| DELETE FROM | Delete existing records | ```sql DELETE FROM table_name WHERE condition; ``` | ```sql DELETE FROM invoices WHERE client_id = (SELECT * FROM
+
+
+### End of new table
+
 ### **Like Operator Patterns** {#like-operator-patterns}
 
 | LIKE Operator | Description |
@@ -66,15 +108,15 @@ Key Notes:
 | ? | Match zero or one instances of the strings preceding it. |
 | ^ | caret(^) matches Beginning of string |
 | $ | End of string |
-| \[abc\] | Any character listed between the square brackets |
-| \[^abc\] | Any character not listed between the square brackets |
-| \[A-Z\] | match any upper case letter. |
-| \[a-z\] | match any lower case letter |
-| \[0-9\] | match any digit from 0 through to 9\. |
-| \[\[:\<:\]\] | matches the beginning of words. |
-| \[\[:\>:\]\] | matches the end of words. |
-| \[:class:\] | matches a character class i.e. \[:alpha:\] to match letters, \[:space:\] to match white space, \[:punct:\] is match punctuations and \[:upper:\] for upper class letters. |
-| p1|p2|p3 | Alternation; matches any of the patterns p1, p2, or p3 |
+| [abc] | Any character listed between the square brackets |
+| [^abc] | Any character not listed between the square brackets |
+| [A-Z] | match any upper case letter. |
+| [a-z] | match any lower case letter |
+| [0-9] | match any digit from 0 through to 9\. |
+| [[:<:]\] | matches the beginning of words. |
+| [[:>:]\] | matches the end of words. |
+| [:class:\] | matches a character class i.e. [:alpha:\] to match letters, [:space:\] to match white space, [:punct:\] is match punctuations and [:upper:\] for upper class letters. |
+| p1\|p2\|p3 | Alternation; matches any of the patterns p1, p2, or p3 |
 | {n} | Exactly n instances of preceding element |
 | {m,n} | between m and n instances of preceding element |
 

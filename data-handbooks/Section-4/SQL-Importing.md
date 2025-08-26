@@ -31,6 +31,6 @@ To import the sample dataset, follow these steps:
 
 **Step 6:** Click Next → Finish.
 
-```admonition Exercise \#9
+```{admonition} Exercise \#9
 On a new tab, use the clauses we’ve learned so far to analyze the dataset. Use 3 new clauses from the ‘Common Syntax’ tab to further analyze your dataset. Save this script to your folder. 
 ```

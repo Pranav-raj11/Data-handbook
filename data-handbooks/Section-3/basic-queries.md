@@ -20,7 +20,7 @@ For the example earlier, we can show the table with only the columns name and ag
 SELECT first_name, age FROM personal_info;
 ```
 
-```admonition Exercise \#4
+```{admonition} Exercise \#4
 In the tab you used for exercise 2, try showing only three of the columns that are in your dataset.
 ```
 
@@ -39,13 +39,13 @@ SELECT first_name, last_name, age FROM personal_info
 WHERE gender = ‘female’
 ```
 
-```tip
+```{tip}
 There are lots of formats for writing conditions. You can use Basic comparison operators (=, \!= (or \<\>), \<, \>, \<=, \>=), multiple conditions with AND/OR: (WHERE gender \= 'Male' AND age \> 45;) and even do things like pattern matching with the LIKE operator. 
 
 If you want to find more operators like this, check out the ‘Common Syntax’ tab for clauses like ‘In’, ‘Between’, ‘Like’ and ‘Regex’. 
 ```
 
-```admonition Exercise \#5
+```{admonition} Exercise \#5
 
 In the same tab as exercise 2, create a filter using at least 1 AND/OR. 
 ```
@@ -71,7 +71,7 @@ SELECT first_name, last_name, age FROM personal_info
 ORDER BY age DESC;
 ```
 
-```admonition Exercise \#6
+```{admonition} Exercise \#6
 
 In the same tab as exercise 2, order your dataset by a column in descending order. 
 ```
@@ -91,7 +91,7 @@ SELECT * FROM personal_info
 LIMIT 2;
 ```
 
-```admonition Exercise \#7
+```{admonition} Exercise \#7
 In the same tab as exercise 2, use the select function while limiting results to only 3 rows. 
 ```
 
@@ -104,7 +104,7 @@ ORDER BY column_name
 LIMIT number_of_rows;
 ```
 
-```admonition Exercise \#8
+```{admonition} Exercise \#8
 
 In the same tab as exercise 2, show your dataset while using all of the SELECT, WHERE, ORDER BY and LIMIT clauses. Now save this script with exercises 2-7 into your folder. 
 ```

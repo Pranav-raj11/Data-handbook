@@ -1,5 +1,3 @@
-## **Section 3: Basic Data Analysis**
-
 ### Navigating MySQL Workbench
 
 MySQL Workbench is MySQL’s official graphical interface for working with databases. It lets you do things like: 
