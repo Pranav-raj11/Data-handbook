@@ -13,7 +13,7 @@ To download:
 * Click the **Download** button  
 * Leave all settings as default as shown below:
 
-![][image1]
+![](kaggle-download.png)
 
 * Then click **Download dataset as ZIP**
 

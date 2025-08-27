@@ -1,10 +1,10 @@
 ## **Section 3: Navigating Power BI**
 
-![][image2]  
-![][image3]
+![](navigating-power-bi-mh.jpg)
 
 1. Ribbon (Top)  
-2. Side View Pane (Left)  
-3. Fields Pange (Right)  
-4. Canvas Area (Center)  
-5. Pages (Bottom)
+2. Side View Pane (Left) 
+3. Canvas Area (Center)   
+4. Fields Pane (Right)  
+5. Data Pane (Right)  
+6. Pages (Bottom)
