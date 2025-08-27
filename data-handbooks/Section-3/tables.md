@@ -29,20 +29,23 @@ CREATE TABLE personal_info (
 
 **Step 2:** Run the code and hit the refresh button in the schemas tab. You should see your table in your database now.
 
-```{admonition} Exercise \#2
+```{tip}
+For a list of data types (Int, Varchar, etc.) go to the syntax tab
+```
 
+
+```{admonition} Exercise \#2
 Make a new tab. Create a table for a list of employees. Include at least 5 columns with at least 3 different data types.  
-*\*For a list of data types (Int, Varchar, etc.) go to the syntax tab\**
 ```
 
 ### Inserting Rows Into Tables
 
 
-In your query editor, write the query (replace \*\_\* with your table and column names where required)
+In your query editor, write the query (replace with your table and column names where required)
 
 ```sql
-INSERT INTO *your_table_name*
-VALUES (*column_1_entry, column_2_entry, …, column_i_entry);
+INSERT INTO your_table_name
+VALUES (column_1_entry, column_2_entry, …, column_i_entry);
 ```
 Here’s an example for the table we created earlier:
 
@@ -57,7 +60,7 @@ VALUES (1, ‘Michael’, ‘Scott’, 40, ‘Male’, ‘1965-03-15’),
 To view your table, in your query editor, write the query
 
 ```sql
-SELECT * FROM *your_table_name*
+SELECT * FROM your_table_name
 ```
 
 For the table from earlier:

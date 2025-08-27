@@ -2,12 +2,15 @@
 
 Welcome to the SQL Handbook!
 
-This handbook is designed to guide you through the fundamentals of SQL, from creating and managing databases to analyzing data efficiently. Whether you’re a beginner looking to understand the basics or someone who wants quick reference examples, this handbook provides clear explanations, practical examples, and helpful tips to make learning SQL easier.
+In this learning guide, you’ll be using MySQL and MySQL Workbench to explore, manipulate, and analyze data. Along the way, you will learn how to:
 
-Inside, you’ll find:
+✅ Install and navigate MySQL Workbench to manage databases efficiently  
+✅ Import datasets and create tables to organize your data  
+✅ Write SQL queries to extract, filter, and summarize data  
+✅ Save queries and export tables or results for further use  
+✅ Apply basic data analysis techniques to uncover trends and insights  
+✅ Document work in a clear and structured format for sharing and reporting
 
-- Syntax templates - Generic examples you can adapt to your own databases.
-- Worked examples - Real-world queries and table designs to illustrate how things work.
-- Tips & notes - Best practices, shortcuts, and important reminders to help you avoid common pitfalls.
+This guide includes exercises using both a dataset you create and an external dataset you will import to practice your SQL skills.
 
-Use this handbook as a learning companion or a reference guide - it’s structured to let you quickly navigate from basic concepts to more advanced topics at your own pace.
+If you have any questions while going through this guide, feel free to email the author, [Pranav Rajeev](mailto:pranav.r@glocalfoundation.ca)

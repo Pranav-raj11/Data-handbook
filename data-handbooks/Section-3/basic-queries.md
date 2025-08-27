@@ -28,7 +28,7 @@ In the tab you used for exercise 2, try showing only three of the columns that a
 
 To extract only the records that fulfill a specified condition, we use the WHERE statement with your SELECT statement 
 ```sql
-SELECT * FROM *your_table_name*
+SELECT * FROM your_table_name
 WHERE condition
 ```
 
@@ -54,7 +54,7 @@ In the same tab as exercise 2, create a filter using at least 1 AND/OR.
 To sort the rows returned by your query, use the ORDER BY clause. You can sort results in ascending order (default) or descending order by adding DESC.
 
 ```sql
-SELECT * FROM *your_table_name*
+SELECT * FROM your_table_name
 ORDER BY column_name (DESC if needed);
 ```
 
@@ -80,7 +80,7 @@ In the same tab as exercise 2, order your dataset by a column in descending orde
 To return only a certain number of rows, use the LIMIT clause. This is helpful when working with large datasets.
 
 ```sql
-SELECT * FROM *your_table_name*
+SELECT * FROM your_table_name
 LIMIT number_of_rows;
 ```
 
@@ -98,7 +98,7 @@ In the same tab as exercise 2, use the select function while limiting results to
 You can also stack all these clauses. 
 
 ```sql 
-SELECT * FROM *your_table_name*
+SELECT * FROM your_table_name
 WHERE condition
 ORDER BY column_name
 LIMIT number_of_rows;

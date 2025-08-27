@@ -21,12 +21,14 @@ Every time you open MySQL Workbench, use this connection to connect to your loca
  
 *\*This is MySQL Workbench on macOS. Windows will look slightly different but overall, they’re almost identical in terms of functionality\**
 
-1. Create a new tab for writing SQL code (queries)  
-2. Opening a SQL file  
-3. Administration tab: used to do administrative work like starting/stopping a server, importing/exporting schemas and more  
-4. Schemas tab: shows the databases that we have in the current database server. Right now, we just have sys (the database that MySQL uses internally to do its work) and maybe Sakila if you’re on Windows  
-5. Run’s the query  
-6. Query Editor Window: where we right SQL code  
-7. Output panel/results grid \- where your query results/tables will appear
+1. **New tab:** Create a new tab for writing SQL code (queries)  
+2. **Open File:** Opening a SQL file  
+3. **Administration tab:** used to do administrative work like starting/stopping a server, importing/exporting schemas and more  
+4. **Schemas tab:** shows the databases that we have in the current database server. Right now, we just have sys (the database that MySQL uses internally to do its work) and maybe Sakila if you’re on Windows  
+5. **Run Query:** Run’s the query  
+6. **Query Editor Window:** where we right SQL code  
+7. **Output panel/results grid:** where your query results/tables will appear
 
+```{Note}
 I will refer to some of these later on with a number in brackets (eg. (2))
+```
