@@ -39,8 +39,9 @@ To do this, you can either right-click on your dataset and choose ‘new column�
 
 Then, in the textbox that opens up, replace ‘column’ with the name you want your column to be and enter the code. For this example, it would be: 
 
-| notremote \= IF(OR(Cleaned\_Dataset\[Work Type\] \= "Hybrid", Cleaned\_Dataset\[Work Type\] \= "In-person"), "Yes", "No").  |
-| :---- |
+```dax
+notremote = IF(OR(Cleaned_Dataset[Work Type] = "Hybrid", Cleaned_Dataset[Work Type] = "In-person"), "Yes", "No").  
+```
 
 Click the check-mark and you should now have a new label under your dataset in the right data panel.   
  
@@ -55,8 +56,12 @@ To do this, you can either right-click on your dataset and choose ‘new measure
 
 Then, in the textbox that opens up, replace ‘Measure’ with the name you want your measure to be and enter the code. For this example, it would be: 
 
-| HighPayingJobs \= CALCULATE(     COUNTROWS(Cleaned\_Dataset),     Cleaned\_Dataset\[Avg\_Salary\] \> 100000 )  |
-| :---- |
+```dax
+HighPayingJobs = CALCULATE(
+    COUNTROWS(Cleaned_Dataset),
+    Cleaned_Dataset[Avg_Salary] > 100000
+)
+```
 
 ![](section-4-images/highpayingjobs.png)
 
