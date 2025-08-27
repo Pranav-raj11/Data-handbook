@@ -87,8 +87,10 @@ Key Notes:
 
 
 ### End of new table
-
+(like-operator-patterns)=
+### Like Operator Patterns
 ### **Like Operator Patterns** {#like-operator-patterns}
+
 
 | LIKE Operator | Description |
 | :---- | :---- |
