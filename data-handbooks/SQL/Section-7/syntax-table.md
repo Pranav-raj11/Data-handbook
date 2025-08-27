@@ -1,4 +1,4 @@
-## **Section 7: Common Syntax**
+## **Common Clauses**
 
 
 ```{Note}
@@ -10,10 +10,10 @@ Key Notes:
 - Order: SELECT, FROM, WHERE, ORDER BY, LIMIT
 ```
 
-| Function | Description | Syntax | Example |
+| Clause | Description | Syntax | Example |
 | :---- | :---- | :---- | :---- |
 | USE | Select database for query | ```USE database_name;``` | `USE db;`  |
-| Select | Returns the table with the columns specified | `SELECT column 1, column2 …  FROM table_name; (use * for all columns)` | `SELECT * FROM Customers;` |
+| SELECT | Returns the table with the columns specified | `SELECT column 1, column2 …  FROM table_name; (use * for all columns)` | `SELECT * FROM Customers;` |
 | AS | Set a column name to something else. You can use arithmetic with columns (column_name + 10) | `SELECT column 1 AS ‘new column name’, column2 …  FROM table_name;`   | `SELECT Price + 10 AS Price FROM Customers` |
 | WHERE | Used to extract only the records that fulfill the specified condition  | `SELECT column 1, column2, … FROM table_name WHERE condition;`  | Select all customers from Mexico: `SELECT * FROM Customers WHERE Country = ‘Mexico’;`  |
 | SELECT DISTINCT | Select columns but with no duplicates | `SELECT DISTINCT column 1, column2, … FROM table_name;`    (use * for all columns) | `SELECT DISTINCT * FROM Customers;` |
@@ -31,7 +31,7 @@ Key Notes:
 | Self Join | A self join is a regular join, but the table is joined with itself. | `SELECT t1.column_name, t2.column_name FROM table_name t1 INNER JOIN table_name t2 ON t1.column_name = t2.column_name;` | `SELECT e.employee_id, e.first_name, m.first_name AS manager FROM employees e INNER JOIN employees m ON e.reports_to = m.employee_id` |
 | Joining Multiple Tables | Running a join on multiple datasets |  `SELECT column_name(s) FROM table1 INNER JOIN table2 ON table1.column_name = table2.column_name; (INNER) JOIN table3 ON table1.column_name  = table3.column_name` | `SELECT o.order_id, o.order_date, c.first_name, c.last_name, os.name AS status FROM orders o JOIN customers c ON o.customer_id = c.customer_id JOIN order_statuses os ON o.status = os.order_status_id` |
 | Compound Join Conditions | When you have multiple conditions to join 2 tables.  | `SELECT column_name(s) FROM table1 JOIN table2 ON table1.column_name = table2.column_name AND  table1.column_name2 = table2.column_name2` | `SELECT * FROM order_items oi JOIN order_item_notes oin ON oi.order_id = oin.order_id AND oi.product_id = oin_product_id` |
-| Implicit Join | A way to join tables by listing them in the FROM clause, separated by commas, and specifying the join condition in the WHERE clause | `SELECT column_name(s) FROM table1, table2 WHERE table1.column_name = table2.column_name;` | `SELECT * FROM orders o, customers c WHERE o.customer_id = c.customer_id` |
+| IMPLICIT JOIN | A way to join tables by listing them in the FROM clause, separated by commas, and specifying the join condition in the WHERE clause | `SELECT column_name(s) FROM table1, table2 WHERE table1.column_name = table2.column_name;` | `SELECT * FROM orders o, customers c WHERE o.customer_id = c.customer_id` |
 | LEFT JOIN | Returns all records from the left table (table1), and the matching records (if any) from the right table (table2) | `SELECT column_name(s) FROM table1 LEFT JOIN table2 ON table1.column_name = table2.column_name;` | `SELECT p.product_id, p.name, oi.quantity FROM  products p LEFT JOIN order_items oi ON p.product_id = oi.product_id` |
 | RIGHT JOIN | Returns all records from the right table (table2), and the matching records (if any) from the left table (table1). | `SELECT column_name(s) FROM table1 RIGHT JOIN table2 ON table1.column_name = table2.column_name;` |  `SELECT e.employee_id, e.first_name, d.name AS department FROM employees e RIGHT JOIN departments d ON e.department_id = d.department_id;` |
 | OUTER Joining Multiple Tables | Running an outer join on multiple datasets | `SELECT column_name(s) FROM table1 LEFT JOIN table2 ON table1.column_name = table2.column_name; LEFT JOIN table3 ON table1.column_name  = table3.column_name` | `SELECT c.customer_id, c.first_name, o.order_id, sh.name AS shipper FROM  customers c LEFT JOIN orders o ON c.customer_id = o.customer_id LEFT JOIN shippers sh ON o.shipper_id = sh.shipper_id ORDER BY c.customer_id` |

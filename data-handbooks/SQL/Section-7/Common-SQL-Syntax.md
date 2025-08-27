@@ -10,7 +10,7 @@ Key Notes:
 - Order: SELECT, FROM, WHERE, ORDER BY, LIMIT
 ```
 
-| Function | Description | Syntax | Example |
+| Clause | Description | Syntax | Example |
 | :---- | :---- | :---- | :---- |
 | USE | Select database for query | ```USE database_name;``` | `USE db;`  |
 | Select | Returns the table with the columns specified | `SELECT column 1, column2 …  FROM table_name; (use * for all columns)` | `SELECT * FROM Customers;` |
