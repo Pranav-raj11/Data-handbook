@@ -87,10 +87,9 @@ Key Notes:
 
 
 ### End of new table
-(like-operator-patterns)=
-### Like Operator Patterns
-### **Like Operator Patterns** {#like-operator-patterns}
 
+(like-operator-patterns)=
+### **Like Operator Patterns**
 
 | LIKE Operator | Description |
 | :---- | :---- |
@@ -102,7 +101,8 @@ Key Notes:
 | WHERE CustomerName LIKE 'a__%' | Finds any values that start with "a" and are at least 3 characters in length |
 | WHERE CustomerName LIKE 'a%o' | Finds any values that start with "a" and ends with "o" |
 
-### **Commonly Used Metacharacters in SQL REGEX** {#commonly-used-metacharacters-in-sql-regex}
+(commonly-used-metacharacters-in-sql-regex)=
+### **Commonly Used Metacharacters in SQL REGEX** 
 
 | Pattern | What the Pattern matches |
 | :---- | :---- |
