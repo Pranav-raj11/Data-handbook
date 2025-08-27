@@ -22,8 +22,8 @@ Key Notes:
 | NOT | Used to negate conditions | `SELECT column1, column2, ... FROM table_name WHERE NOT condition;` | `SELECT * FROM Customers WHERE CustomerName NOT LIKE 'A%';` |
 | IN | The IN operator allows you to specify multiple values in a WHERE clause. | `SELECT *  FROM table_name  WHERE column_name IN (value1, value2 …)` | `SELECT * FROM Customers WHERE state IN ('VA', 'GA', 'FL')` |
 | BETWEEN | The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates. | `SELECT *  FROM table_name  WHERE column_name BETWEEN *value1* AND *value2*` | `SELECT * FROM Customers WHERE birth_date BETWEEN '1990-1-1' AND'2000-1-1'` |
-| LIKE | The LIKE operator is used in a WHERE clause to search for a specified pattern in a column. Common pattern notations [here](#like-operator-patterns) | `SELECT *  FROM table_name  WHERE column_name LIKE ‘*pattern*’`  | `SELECT * FROM customers WHERE address LIKE '%trail%' OR address LIKE '%avenue%';` |
-| REGEXP | The LIKE operator is used in a WHERE clause to search for complex specified patterns in a column. Common pattern notations [here](#commonly-used-metacharacters-in-sql-regex) | `SELECT *  FROM table_name  WHERE column_name REGEXP ‘*pattern*’` | `SELECT * FROM customers WHERE last_name REGEXP ‘field\|mac\|rose’;` <br> <br>  `SELECT * FROM customers WHERE first_name REGEXP 'Elka\|Ambur';` <br> <br> `SELECT * FROM customers WHERE last_name REGEXP '(ey\|on)$';` <br> <br>  `SELECT * FROM customers WHERE last_name REGEXP '^MY\|SE';` <br> <br> `SELECT * FROM customers WHERE last_name REGEXP 'B\[RU\]';` |
+| LIKE | The LIKE operator is used in a WHERE clause to search for a specified pattern in a column. Common pattern notations [here](like-patterns.md) | `SELECT *  FROM table_name  WHERE column_name LIKE ‘*pattern*’`  | `SELECT * FROM customers WHERE address LIKE '%trail%' OR address LIKE '%avenue%';` |
+| REGEXP | The LIKE operator is used in a WHERE clause to search for complex specified patterns in a column. Common pattern notations [here](common-metacharacters.md) | `SELECT *  FROM table_name  WHERE column_name REGEXP ‘*pattern*’` | `SELECT * FROM customers WHERE last_name REGEXP ‘field\|mac\|rose’;` <br> <br>  `SELECT * FROM customers WHERE first_name REGEXP 'Elka\|Ambur';` <br> <br> `SELECT * FROM customers WHERE last_name REGEXP '(ey\|on)$';` <br> <br>  `SELECT * FROM customers WHERE last_name REGEXP '^MY\|SE';` <br> <br> `SELECT * FROM customers WHERE last_name REGEXP 'B\[RU\]';` |
 | IS NULL | Checks for null values | `SELECT * FROM table_name WHERE column_name IS NULL` | `SELECT * FROM orders WHERE shipped_date IS NULL` |
 | ORDER BY | Used to sort the result-set in ascending or descending order.  | `SELECT * FROM table_name ORDER BY column_name (DESC *optional*)` | `SELECT *, quantity * unit_price AS total_price  FROM order_items WHERE order_id = 2 ORDER BY total_price DESC` |
 | LIMIT | The LIMIT clause is used to specify the number of records to return. You can use the offset value to skip that number of rows.  | `SELECT * FROM table_name LIMIT offset, number` | `SELECT * FROM customers ORDER BY points DESC LIMIT 3` |
@@ -45,57 +45,3 @@ Key Notes:
 | CREATE TABLE | Used to create a new table in a database | `CREATE TABLE table_name (     column1 datatype,     column2 datatype,     column3 datatype,    .... );` | `CREATE TABLE invoices_archived AS SELECT i.invoice_id, i.number, c.name AS client, i.invoice_total,  i.payment_total, invoice_date, i.payment_date, i.due_date FROM invoices i JOIN clients c USING (client_id) WHERE i.payment_date IS NOT NULL` |
 | UPDATE / SET | Used to modify the existing records in a table. | `UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;` | `UPDATE customers SET points = points \+ 50 WHERE birth_date \< '1990-01-01'` |
 | DELETE FROM | Used to delete existing records in a table. | `DELETE FROM table_name WHERE condition;` | `DELETE FROM invoices WHERE client_id = (SELECT * FROM clients	WHERE name = 'Myworks')` |
-
-
-
-### End of new table
-
-(like-operator-patterns)=
-### **Like Operator Patterns**
-
-| LIKE Operator | Description |
-| :---- | :---- |
-| WHERE CustomerName LIKE 'a%' | Finds any values that start with "a" |
-| WHERE CustomerName LIKE '%a' | Finds any values that end with "a" |
-| WHERE CustomerName LIKE '%or%' | Finds any values that have "or" in any position |
-| WHERE CustomerName LIKE '_r%' | Finds any values that have "r" in the second position |
-| WHERE CustomerName LIKE 'a_%' | Finds any values that start with "a" and are at least 2 characters in length |
-| WHERE CustomerName LIKE 'a__%' | Finds any values that start with "a" and are at least 3 characters in length |
-| WHERE CustomerName LIKE 'a%o' | Finds any values that start with "a" and ends with "o" |
-
-(commonly-used-metacharacters-in-sql-regex)=
-### **Commonly Used Metacharacters in SQL REGEX** 
-
-| Pattern | What the Pattern matches |
-| :---- | :---- |
-| * | Zero or more instances of string preceding it |
-| + | One or more instances of strings preceding it |
-| . | Any single character |
-| ? | Match zero or one instances of the strings preceding it. |
-| ^ | caret(^) matches Beginning of string |
-| $ | End of string |
-| [abc] | Any character listed between the square brackets |
-| [^abc] | Any character not listed between the square brackets |
-| [A-Z] | match any upper case letter. |
-| [a-z] | match any lower case letter |
-| [0-9] | match any digit from 0 through to 9\. |
-| [[:<:]\] | matches the beginning of words. |
-| [[:>:]\] | matches the end of words. |
-| [:class:\] | matches a character class i.e. [:alpha:\] to match letters, [:space:\] to match white space, [:punct:\] is match punctuations and [:upper:\] for upper class letters. |
-| p1\|p2\|p3 | Alternation; matches any of the patterns p1, p2, or p3 |
-| {n} | Exactly n instances of preceding element |
-| {m,n} | between m and n instances of preceding element |
-
-### **Commonly Used Data Types**
-
-| Data Type | Description |
-| :---- | :---- |
-| CHAR(size) | A FIXED length string (can contain letters, numbers, and special characters). The size parameter specifies the column length in characters \- can be from 0 to 255\. Default is 1\.  |
-| VARCHAR(size) | A VARIABLE length string (can contain letters, numbers, and special characters). The size parameter specifies the maximum column length in characters \- can be from 0 to 65535 |
-| INT(size) | Signed range is from \-2147483648 to 2147483647\. Unsigned range is from 0 to 4294967295\. The size parameter specifies the maximum display width |
-| DECIMAL(size, d) | An exact fixed-point number. The total number of digits is specified in size. The number of digits after the decimal point is specified in the d parameter. The maximum number for size is 65\. The maximum number for d is 30\. The default value for size is 10\. The default value for d is 0\. |
-| DATE | A date. Format: YYYY-MM-DD. |
-| TIME(fsp) | A time. Format: hh:mm:ss.  |
-| DATETIME(fsp) | A date and time combination. Format: YYYY-MM-DD hh:mm:ss. |
-| YEAR | A year in four-digit format. Values allowed in four-digit format: 1901 to 2155, and 0000\. |
-
