@@ -1,4 +1,4 @@
-# **Data Analysis With SQL (60 hours)**
+# **Data Analysis With SQL**
 
 In this learning guide, you’ll be using MySQL and MySQL Workbench to explore, manipulate, and analyze data.
 
@@ -331,7 +331,7 @@ Step 6: Click Next → Finish.
 
 On a new tab, use the clauses we’ve learned so far to analyze the dataset. Use 3 new clauses from the ‘Common Syntax’ tab to further analyze your dataset. Save this script to your folder. 
 
-## **Section 3: Final Documentation (15 hours)**
+## **Section 3: Final Documentation**
 
 Based on the analysis you conducted, write a short summary on Google Docs (around 3–5 sentences) answering questions like:
 
@@ -339,7 +339,7 @@ Based on the analysis you conducted, write a short summary on Google Docs (aroun
 * What type of insights did you get from analyzing the dataset?  
 * Did anything surprise you?
 
-## **Section 5: Save & Upload Your Work (5 hours)**
+## **Section 5: Save & Upload Your Work**
 
 * Create a folder in Google Drive and name it: **YourName\_SQL\_Queries**  
 * Upload:  

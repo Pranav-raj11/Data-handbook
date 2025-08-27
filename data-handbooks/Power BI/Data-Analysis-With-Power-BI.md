@@ -170,8 +170,6 @@ We can also customize the slicer. In the ‘Format your Visual’ tab, we can go
 ![][image24]  
 Congratulations\! You’ve now made three different visuals to analyze this dataset (card, bar chart and pie chart). You can format your canvas the way you would like and for an exercise, try to come up with 4 more visualizations for your dashboard. Try out a new visual type and add a title to your dashboard canvas (From the Ribbon (1), Insert → Text Box). Add some customization as well like a colour theme. By unclicking on any selected visuals, we can also customize the page in the ‘Format your report page’ tab (![][image25]).
 
-### 
-
 ## **Section 5: Saving and Publishing Dashboard**
 
 Once your report is ready, you’ll want to save it locally and optionally share it online for others to view.

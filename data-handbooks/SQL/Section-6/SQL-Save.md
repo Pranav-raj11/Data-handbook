@@ -1,4 +1,4 @@
-## **Section 5: Save & Upload Your Work (5 hours)**
+## **Section 6: Save & Upload Your Work**
 
 * Create a folder in Google Drive and name it: **YourName\_SQL\_Queries**  
 * Upload:  

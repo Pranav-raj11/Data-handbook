@@ -1,4 +1,4 @@
-## **Section 5: Final Documentation (15 hours)**
+## **Section 5: Final Documentation**
 
 Based on the analysis you conducted, write a short summary on Google Docs (around 3–5 sentences) answering questions like:
 
