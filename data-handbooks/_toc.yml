@@ -10,11 +10,11 @@ parts:
       - file: SQL/Section-2/SQL-Getting-Started
       - file: SQL/Section-3/SQL-Basic-Data-Analysis
         sections: 
-        - file: SQL/Section-3/navigating
-        - file: SQL/Section-3/saving
-        - file: SQL/Section-3/database
-        - file: SQL/Section-3/tables
-        - file: SQL/Section-3/basic-queries
+          - file: SQL/Section-3/navigating
+          - file: SQL/Section-3/saving
+          - file: SQL/Section-3/database
+          - file: SQL/Section-3/tables
+          - file: SQL/Section-3/basic-queries
       - file: SQL/Section-4/SQL-Importing
       - file: SQL/Section-5/SQL-Final-Documentation
       - file: SQL/Section-6/SQL-Save
