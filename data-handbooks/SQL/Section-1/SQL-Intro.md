@@ -13,7 +13,7 @@ In this learning guide, you’ll be using MySQL and MySQL Workbench to explore, 
 
 This guide includes exercises using both a dataset you create and an external dataset you will import to practice your SQL skills.
 
-If you have any questions while going through this guide, feel free to email the author, [Pranav Rajeev](mailto:pranav.r@glocalfoundation.ca)
+If you have any questions while going through this guide, feel free to email the author, [Pranav Rajeev](mailto:pranraj2005@gmail.com)
 
 **Structured Query Language (SQL)** is the standard language used to manage and analyze data stored in relational databases. It lets you do things like:
 * Retrieve data  

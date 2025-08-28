@@ -12,7 +12,7 @@ Along the way, you will learn how to:
 
 This guide includes exercises using both a sample dataset you create and an external dataset you will import to practice your SQL skills.
 
-If you have any questions while going through this guide, feel free to email the author, [Pranav Rajeev](mailto:pranav.r@glocalfoundation.ca)
+If you have any questions while going through this guide, feel free to email the author, [Pranav Rajeev](mailto:pranraj2005@gmail.com)
 
 ## **Section 1: SQL Introduction**
 
