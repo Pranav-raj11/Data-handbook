@@ -20,21 +20,21 @@ parts:
       - file: SQL/Section-6/SQL-Save
       - file: SQL/Section-7/Common-SQL-Syntax
         sections:
-        - file: SQL/Section-7/syntax-table
-        - file: SQL/Section-7/like-patterns
-        - file: SQL/Section-7/common-metacharacters
-        - file: SQL/Section-7/common-data-types
+          - file: SQL/Section-7/syntax-table
+          - file: SQL/Section-7/like-patterns
+          - file: SQL/Section-7/common-metacharacters
+          - file: SQL/Section-7/common-data-types
   - caption: "Power BI"
     chapters:
-      - file: Power BI/Data-Analysis-With-Power-BI
-      - file: Power BI/Section-1/power-bi-intro
-      - file: Power BI/Section-2/powerbi-getting-started
-      - file: Power BI/Section-3/navigating-powerbi
-      - file: Power BI/Section-4/powerbi-basic-visualization
+      - file: Power-BI/Data-Analysis-With-Power-BI
+      - file: Power-BI/Section-1/power-bi-intro
+      - file: Power-BI/Section-2/powerbi-getting-started
+      - file: Power-BI/Section-3/navigating-powerbi
+      - file: Power-BI/Section-4/powerbi-basic-visualization
         sections:
-        - file: Power BI/Section-4/importing-data
-        - file: Power BI/Section-4/transforming
-        - file: Power BI/Section-4/creating-dax-measures-and-columns
-        - file: Power BI/Section-4/creating-visuals
-      - file: Power BI/Section-5/powerbi-saving-publishing
-      - file: Power BI/Section-6/powerbi-final-documentation
+        - file: Power-BI/Section-4/importing-data
+        - file: Power-BI/Section-4/transforming
+        - file: Power-BI/Section-4/creating-dax-measures-and-columns
+        - file: Power-BI/Section-4/creating-visuals
+      - file: Power-BI/Section-5/powerbi-saving-publishing
+      - file: Power-BI/Section-6/powerbi-final-documentation

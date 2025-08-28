@@ -1,15 +1,20 @@
 # Introduction
 
-Welcome to the SQL Handbook!
+Welcome to the Data Analysis Learning Guide!
 
-In this learning guide, you’ll be using MySQL and MySQL Workbench to explore, manipulate, and analyze data. Along the way, you will learn how to:
+In this learning guide, you’ll find two data handbooks to learn MySQL and Power BI to explore, analyze, and visualize data. 
 
-✅ Install and navigate MySQL Workbench to manage databases efficiently  
-✅ Import datasets and create tables to organize your data  
-✅ Write SQL queries to extract, filter, and summarize data  
-✅ Save queries and export tables or results for further use  
-✅ Apply basic data analysis techniques to uncover trends and insights  
-✅ Document work in a clear and structured format for sharing and reporting
+### SQL Handbook
+
+Learn how to manage, query, and analyze data using MySQL and MySQL Workbench. You’ll practice importing datasets, writing SQL queries, and applying basic analysis techniques that form the foundation of any data professional’s toolkit.
+
+:point_right: [Go to SQL Handbook](SQL/Data-Analysis-With-SQL.md)
+
+### Power BI Handbook
+
+Learn how to explore and visualize data with Microsoft Power BI. You’ll practice cleaning data, creating interactive dashboards, and publishing reports to share insights effectively.
+
+:point_right:[Go to Power BI Handbook](Power-BI/Data-Analysis-With-Power-BI.md)
 
 This guide includes exercises using both a dataset you create and an external dataset you will import to practice your SQL skills.
 

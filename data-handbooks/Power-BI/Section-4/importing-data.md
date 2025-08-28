@@ -1,7 +1,5 @@
 ### **Importing Data**
 
-Steps
-
 **Step 1:** In the Ribbon (1), there is a button called Get data. From here, you can find all the data sources you might need including. For our dataset, click on Text/CSV. 
 ![](section-4-images/get-data-csv.png)
 **Step 2:** Locate the desired file (cleaned_dataset.csv). Load the dataset. 
