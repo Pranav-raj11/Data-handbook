@@ -4,7 +4,7 @@
 
 Let’s start by grabbing our dataset from **Kaggle**, an awesome free platform full of real-world data.
 
-If you’re new to Kaggle, click **Register**—you can sign up with your Google account or email. Already have an account? Just sign in.
+If you’re new to Kaggle, click **Register**. You can sign up with your Google account or email. If you already have an account, just sign in.
 
 For this project, we’ll be using the dataset: [Data Analyst Job Roles in Canada](https://www.kaggle.com/datasets/amanbhattarai695/data-analyst-job-roles-in-canada)
 

@@ -1,83 +1,3 @@
-## **Section 4: Basic Visualization**
-
-### **Importing Data**
-
-Steps
-
-**Step 1:** In the Ribbon (1), there is a button called Get data. From here, you can find all the data sources you might need including. For our dataset, click on Text/CSV. 
-![](section-4-images/get-data-csv.png)
-**Step 2:** Locate the desired file (cleaned_dataset.csv). Load the dataset. 
-![](section-4-images/load.png) 
-**Step 3:** You will now see the dataset in the data panel. If you expand the dataset name, you’ll see the different column names in it.   
-![](section-4-images/see-data-in-panel.png)
-
-### **Transforming** 
-
-In the Ribbon (1), there is a button called transform data. This will take you to the Power Query Editor where you can do things like: 
-
-- Remove unnecessary columns  
-- Rename columns  
-- Change data types (e.g., text, number, date)  
-- Filter rows (e.g., remove nulls)
-
-Click **Close & Apply** to save changes.
-
-![](section-4-images/transforming.png)
-
-### **Creating Dax measures/columns**
-
-**DAX (Data Analysis Expressions)** is the formula language in Power BI. You can use it to create calculated fields that aren’t in your dataset.
-
-#### Calculated Columns  
-
-These are added to your data table  
-
-For example, we can make an in-person indicator column. If the job requires you to be in-person at any point, “Yes” and if not, “No.”
-
-To do this, you can either right-click on your dataset and choose ‘new column’ or go to Modeling → New Column. 
-
-![](section-4-images/newcolumn.png)
-![](section-4-images/newcolumnv2.png) 
-
-Then, in the textbox that opens up, replace ‘column’ with the name you want your column to be and enter the code. For this example, it would be: 
-
-```dax
-notremote = IF(OR(Cleaned_Dataset[Work Type] = "Hybrid", Cleaned_Dataset[Work Type] = "In-person"), "Yes", "No").  
-```
-
-Click the check-mark and you should now have a new label under your dataset in the right data panel.   
- 
-![](section-4-images/notremote.png)
-
-#### DAX Measures 
-
-Similarly, you can also create DAX measures. These are values that are fields for your dataset. These are not stored in the table, they calculate values on the fly.
-
-For example, say you want to see the jobs that pay above $100k. 
-
-To do this, you can either right-click on your dataset and choose ‘new measure’ or go to Modeling → New Measure. 
-
-Then, in the textbox that opens up, replace ‘Measure’ with the name you want your measure to be and enter the code. For this example, it would be: 
-
-```dax
-HighPayingJobs = CALCULATE(
-    COUNTROWS(Cleaned_Dataset),
-    Cleaned_Dataset[Avg_Salary] > 100000
-)
-```
-
-![](section-4-images/highpayingjobs.png)
-
-#### Card Visual
-
-To see this value, we can create a visual. Let’s make a card. Cards are tools for presenting key metrics in a visually appealing format. 
-
-**Step 1:** In the visualization panel, select the card icon  
-**Step 2:** In the values field, drag and drop the HighPayingJobs measure
-
-![](section-4-images/dragdrophighpayingjobs.png)  
-Now on your canvas, you will be able to see the card. You can format this card in a number of ways in the ‘Format your visual’ tab in the visualizations panel (![](section-4-images/visualizationspanel.png)). 
-
 ### **Creating simple visuals**
 
 Creating visuals in Power BI is pretty straightforward. 
@@ -94,7 +14,7 @@ Creating visuals in Power BI is pretty straightforward.
 
 Let’s make a few visuals for this dashboard. 
 
-Bar Chart:
+#### Bar Chart:
 
 Select Clustered Column Chart from the list of visuals. Then, in the axis, let’s drag in the province and for the y-axis, avg\_salary. For this, make sure to have the y-axis be average of avg\_salary. For tooltips, we can have our newly created measure of HighPayingJobs. You should see a chart like this: 
 
@@ -104,12 +24,14 @@ Head to the format your visual tab and select columns. Now, if you want each bar
 ![](section-4-images/selectbarchart.png) 
 ![](section-4-images/colourbarchart.png)![](section-4-images/colouredchart.png)
 
+#### Pie Chart
+
 Let’s make one more. How about a pie chart this time. We can see the proportion of different work types in this list of jobs. 
 
 Select Pie Chart from the list of visuals. ![](section-4-images/piechartlogo.png)For the legend, we want it to be coloured so that the different work types are shown. So, drag and drop ‘Work Type’ for Legend. For the values, we want all the different jobs available. So, we can drag and drop Job Title and set it to ‘count’. This counts the number of job titles that are there in the dataset.   
 ![](section-4-images/piechartfields.png)![](section-4-images/piechart.png)
 
-### **Slicers**
+#### **Slicers**
 
 Slicers are interactive filters that allow users to quickly and easily filter data on a report page. These can be really helpful when analyzing a dataset. For our dashboard, let’s add a slicer. 
 
