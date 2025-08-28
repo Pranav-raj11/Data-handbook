@@ -20,13 +20,12 @@ parts:
       - file: SQL/Section-6/SQL-Save
       - file: SQL/Section-7/Common-SQL-Syntax
         sections:
-          - file: SQL/Section-7/syntax-table
-          - file: SQL/Section-7/like-patterns
-          - file: SQL/Section-7/common-metacharacters
-          - file: SQL/Section-7/common-data-types
+        - file: SQL/Section-7/syntax-table
+        - file: SQL/Section-7/like-patterns
+        - file: SQL/Section-7/common-metacharacters
+        - file: SQL/Section-7/common-data-types
   - caption: "Power BI"
     chapters:
-      - file: Power-BI/Data-Analysis-With-Power-BI
       - file: Power-BI/Section-1/power-bi-intro
       - file: Power-BI/Section-2/powerbi-getting-started
       - file: Power-BI/Section-3/navigating-powerbi
